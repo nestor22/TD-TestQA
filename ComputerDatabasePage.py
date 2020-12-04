@@ -12,7 +12,7 @@ class ComputerDatabasePage(object):
     
     @property
     def is_loaded(self):
-        WebDriverWait(self._driver, 10).until(Ec.presence_of_element_located((By.CSS_SELECTOR, '#main > h1')))
+        WebDriverWait(self._driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '#main > h1')))
         return True
     
     def open(self):

@@ -1,9 +1,11 @@
-import csv, unittest
+import csv
 import unittest
 from ddt import ddt, data, unpack
 from selenium import webdriver
 from pyunitreport import HTMLTestRunner
 from ComputerDatabasePage import ComputerDatabasePage as CP
+from pyunitreport import HTMLTestRunner
+
 
 
 def get_data(file_name):
@@ -46,7 +48,7 @@ class AddComputerTest(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.close()
 
-
-
 if __name__ == "__main__":
-    unittest.main(verbosity=2, testRunner = HTMLTestRunner(output = 'reports', report_name = 'hello-world-report'))
+    unittest.main(verbosity = 2, testRunner = HTMLTestRunner(output = 'reports', report_name = 'add-computer-report'))
+
+
